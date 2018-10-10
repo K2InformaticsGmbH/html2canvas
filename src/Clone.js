@@ -649,6 +649,7 @@ export const cloneWindow = (
             documentClone.adoptNode(cloner.documentElement),
             documentClone.documentElement
         );
+        cloneIframeContainer.width = (bounds.width + 1).toString();
         documentClone.close();
 
         return iframeLoad;
